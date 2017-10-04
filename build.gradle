@@ -31,7 +31,7 @@ ext {
 
     /* Dependencies */
     commonsRdfVersion = '0.3.0-incubating'
-    trellisApiVersion = '0.2.0-SNAPSHOT'
+    trellisApiVersion = '0.2.0'
     trellisVocabularyVersion = '0.1.0'
 
     /* Testing */
@@ -71,10 +71,6 @@ repositories {
     jcenter()
     mavenCentral()
     mavenLocal()
-    // TODO -- remove this after the first release of the API
-    maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-    }
 }
 
 gradle.projectsEvaluated {
