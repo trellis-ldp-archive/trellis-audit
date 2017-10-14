@@ -12,6 +12,8 @@
  * limitations under the License.
  */
 /**
+ * Trellis Audit data writer
+ *
  * A package used for generating audit-related triples based on server events.
  *
  * @author acoburn
