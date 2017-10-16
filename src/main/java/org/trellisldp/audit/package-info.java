@@ -14,7 +14,7 @@
 /**
  * Trellis Audit data writer
  *
- * A package used for generating audit-related triples based on server events.
+ * <p>A package used for generating audit-related triples based on server events.</p>
  *
  * @author acoburn
  */
