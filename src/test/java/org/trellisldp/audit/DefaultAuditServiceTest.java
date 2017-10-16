@@ -15,9 +15,10 @@ package org.trellisldp.audit;
 
 import static java.time.Instant.now;
 import static java.util.Optional.of;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
+import static org.mockito.MockitoAnnotations.initMocks;
 import static org.trellisldp.vocabulary.RDF.type;
 
 import java.time.Instant;
@@ -26,11 +27,11 @@ import org.apache.commons.rdf.api.Dataset;
 import org.apache.commons.rdf.api.IRI;
 import org.apache.commons.rdf.api.RDF;
 import org.apache.commons.rdf.simple.SimpleRDF;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.trellisldp.api.AuditService;
 import org.trellisldp.api.Session;
 import org.trellisldp.vocabulary.AS;
@@ -41,7 +42,7 @@ import org.trellisldp.vocabulary.XSD;
 /**
  * @author acoburn
  */
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(JUnitPlatform.class)
 public class DefaultAuditServiceTest {
 
     private static RDF rdf = new SimpleRDF();
@@ -53,8 +54,9 @@ public class DefaultAuditServiceTest {
     @Mock
     private Session mockSession;
 
-    @Before
+    @BeforeEach
     public void setUp() {
+        initMocks(this);
         when(mockSession.getAgent()).thenReturn(Trellis.AnonymousUser);
         when(mockSession.getCreated()).thenReturn(created);
         when(mockSession.getDelegatedBy()).thenReturn(of(Trellis.RepositoryAdministrator));
