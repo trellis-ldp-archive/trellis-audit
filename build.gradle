@@ -3,7 +3,7 @@ plugins {
     id 'com.github.ben-manes.versions' version '0.17.0'
     id 'net.researchgate.release' version '2.6.0'
     id 'com.github.kt3k.coveralls' version '2.8.2'
-    id 'org.sonarqube' version '2.5'
+    id 'org.sonarqube' version '2.6'
 }
 
 apply plugin: 'maven'
@@ -35,9 +35,9 @@ ext {
     trellisVocabularyVersion = '0.1.0'
 
     /* Testing */
-    junitVersion = '5.0.1'
-    junitPlatformVersion = '1.0.1'
-    mockitoVersion = '2.11.0'
+    junitVersion = '5.0.2'
+    junitPlatformVersion = '1.0.2'
+    mockitoVersion = '2.12.0'
     jacocoVersion = '0.7.9'
     apiguardianVersion = '1.0.0'
 
